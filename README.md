@@ -47,7 +47,7 @@ Get-ChildItem Cert:\CurrentUser\My | Where-Object { $_.FriendlyName -eq "Localho
 
 ---
 
-## 2. 証明書を .pfx として書き出す
+## 1. 証明書を .pfx として書き出す
 
 ### 目的
 - Windows の証明書ストアにある証明書を  
@@ -192,7 +192,8 @@ python -m uvicorn main:app \
 
 ### Uvicornがctrl+cで終了しない場合
 
-#### タスクマネージャーでPythonを強制終了する
+- Excelを開いたままUvicornを終了しようとするとフリーズすることがある
+- その場合はタスクマネージャーでプロセスを強制終了する
 
 1. Ctrl + Shift + Esc
 
@@ -218,7 +219,3 @@ python -m uvicorn main:app \
 - `certmgr.msc` で「信頼されたルート証明機関」に `LocalhostDevCert` が入っているか確認
 
 ---
-
-もしどこかのステップで  
-「このコマンドを打ったらこういうメッセージが出た」  
-というのがあれば、そのまま貼ってくれれば、そこだけピンポイントで一緒にほどいていこう。
