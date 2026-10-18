@@ -8,6 +8,8 @@ app = FastAPI()
 
 @app.get("/qr")
 async def generate_qr(text: str):
+    if not text:
+        return Response(status_code=400, content=b"text is required")
     # QRコード生成
     img = qrcode.make(text)
 
