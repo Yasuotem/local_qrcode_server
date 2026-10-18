@@ -1,0 +1,3 @@
+# QRCodeLocalServer
+
+ローカルにAPIサーバーとして立ち上げ、ExcelのIMAGE関数から利用してQRコードを表示させることを目的としたアプリケーションです。
