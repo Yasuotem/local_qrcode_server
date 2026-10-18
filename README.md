@@ -9,11 +9,3 @@ git clone https://github.com/Yasuotem/local_qrcode_server.git
 cd local_qrcode_server
 pip install -r requirements.txt
 ```
-
-```bash
-python -m uvicorn main:app \
-  --host localhost \
-  --port 8000 \
-  --ssl-keyfile ~/localhost.key \
-  --ssl-certfile ~/localhost.pem
-```
